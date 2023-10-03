@@ -193,7 +193,7 @@ document.addEventListener('scriptsLoaded', () => {
 
         try {
 
-            const response = await fetch("http://localhost:8080/hospedes", {
+            const response = await fetch("https://apirest-hotel.up.railway.app/hospedes", {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

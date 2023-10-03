@@ -22,7 +22,7 @@ const persist = document.querySelector('#dbPersist');
 
 let idReservaNextModal;
 
-const urlId = "http://localhost:8080/reservas";
+const urlId = "https://apirest-hotel.up.railway.app/reservas";
 //Recuperando a última reserva no banco de dados
 fetch(urlId)
     .then(response => response.json())
@@ -48,7 +48,7 @@ persist.addEventListener('click', async () => {
     }
 
     try {
-        const resposta = await fetch("http://localhost:8080/hospedes", {
+        const resposta = await fetch("https://apirest-hotel.up.railway.app/hospedes", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',

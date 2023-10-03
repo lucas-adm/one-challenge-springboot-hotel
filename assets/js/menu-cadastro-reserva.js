@@ -19,7 +19,7 @@ const botaoProximo = document.querySelector('#btnToNext');
 
 export let idReserva;
 
-const urlId = "http://localhost:8080/reservas";
+const urlId = "https://apirest-hotel.up.railway.app/reservas";
 //Recuperando a última reserva no banco de dados
 fetch(urlId)
     .then(response => response.json())
@@ -46,7 +46,7 @@ botaoProximo.addEventListener('click', async () => {
     }
 
     try {
-        const resposta = await fetch("http://localhost:8080/reservas", {
+        const resposta = await fetch("https://apirest-hotel.up.railway.app/reservas", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',

@@ -48,7 +48,7 @@ document.addEventListener('scriptsLoaded', () => {
 
                 confirmDelete.classList.remove('active');
 
-                fetch(`http://localhost:8080/hospedes/${hospedeId}`, {
+                fetch(`https://apirest-hotel.up.railway.app/hospedes/${hospedeId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
