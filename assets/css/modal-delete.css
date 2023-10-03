@@ -1,0 +1,75 @@
+@import url(root.css);
+
+.modal-delete-container {
+    min-width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    display: flex;
+}
+
+.modal-delete {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 20px 10px 20px;
+    background-color: var(--bg-lighter);
+    gap: 15px 0;
+    border-radius: 0 25px;
+    border: 1px solid var(--bg-light);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.close-modal-delete {
+    position: absolute;
+    top: 9.99px;
+    right: 9.99px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.modal-delete span {
+    font-size: 1rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: red;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.close-modal-delete:hover {
+    color: var(--blue);
+}
+
+.btnDelete {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-lighter);
+    color: red;
+    border: 1px solid red;
+    border-radius: 0 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    outline: 0;
+    transition: ease .2s;
+    text-decoration: none;
+}
+
+.btnDelete:hover {
+    transform: scale(1.1);
+    background-color: red;
+    border: none;
+    color: var(--bg-lighter);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

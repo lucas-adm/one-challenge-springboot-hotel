@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Hotel Alura</title>
+    <link rel="stylesheet" href="assets/css/home-menu.css">
+    <link rel="stylesheet" href="assets/css/modal-error.css">
+</head>
+
+<body>
+    <header>
+        <div class="img">
+            <a href="index.html" class="exit"><i class="fa-solid fa-left-long"></i></a>
+            <img src="assets/imgs/Logo.png" alt="Logo do Hotel Alura" title="Home Page">
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="main">
+                <div class="imgContainer">
+                    <img src="assets/imgs/storysetHotel.svg" alt="">
+                </div>
+                <div class="menu">
+                    <h1>Sistema de reservas Hotel Alura</h1>
+                    <h2 class="dayTxt"></h2>
+                    <h3>Bem-vindo!</h3>
+                    <p>Sistema de reservas de hotéis. Controle e gerencie de forma otimizada e fácil o fluxo de reserva
+                        e
+                        hóspedes do hotel!
+                    </p>
+                    <p>Esta ferramenta permitirá que você mantenha um controle completo e detalhado de suas reservas e
+                        hóspedes, você terá acesso a ferramentas especiais para tarefas específicas como:</p>
+                    <p>
+                    <ul>
+                        <li>Registro de reservas e hóspedes</li>
+                        <li>Edição de reservas e hóspedes existentes</li>
+                        <li>Excluir todos os tipos de registro</li>
+                    </ul>
+                    </p>
+                    <div class="menuButtons">
+                        <button id="register"><i class="fa-solid fa-pen-to-square"></i> Registrar
+                            Cliente</button>
+                        <a href="find-guest.html"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modalContainer">
+                <div class="modal">
+                    <i class="fa-regular fa-circle-xmark" id="closeModal"></i>
+                    <form action="" class="form">
+                        <div class="inputContent">
+                            <input type="date" class="firstModalInput" id="mCheckIn" required>
+                            <label for="mCheckIn" class="labelDate firstModalDate">Data de check-in</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="date" class="firstModalInput" id="mCheckOut" required>
+                            <label for="mCheckOut" class="labelDate firstModalDate">Data de check-out</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="number" class="readonly firstModalInput" id="mValor" readonly required>
+                            <label for="mValor" class="labelReadonly">Valor: R$50 por noite</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <label for="mPay">Pagamento</label>
+                            <select name="mPay" id="mPay">
+                                <option value="cartao_de_credito">cartão de crédito</option>
+                                <option value="cartao_de_debito">cartão de débito</option>
+                                <option value="pix">pix</option>
+                            </select>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="number" class="readonly firstModalInput" id="mIdReserve" value="" readonly>
+                            <label for="mIdReserve" class="labelReadonly">Id da reserva</label>
+                        </div>
+                        <button id="btnToNext" type="button">Próximo</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="nextModalContainer">
+                <div class="nextModal">
+                    <i class="fa-regular fa-circle-xmark" id="closeNextModal"></i>
+                    <form action="" class="form">
+                        <div class="inputContent">
+                            <input type="number" class="readonly secondModalInput" id="nextModalIdReserve" value=""
+                                readonly>
+                            <label for="mIdReserve" class="labelReadonly">Id da reserva</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="text" class="secondModalInput" id="mNome" value="" required>
+                            <label for="mNome" class="label">Nome</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="text" class="secondModalInput" id="mSobrenome" value="" required>
+                            <label for="mSobrenome" class="label">Sobrenome</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="date" class="secondModalInput" id="mNascimento" required>
+                            <label for="mNascimento" class="labelDate">Data de Nascimento</label>
+                        </div>
+
+                        <div class="inputContent">
+                            <label for="mNacionalidade">Nacionalidade</label>
+                            <select name="mNacionalidade" id="mNacionalidade">
+                                <option value="brasileiro">brasileiro</option>
+                                <option value="portugues">português</option>
+                                <option value="estadunidense">estadunidense</option>
+                            </select>
+                        </div>
+
+                        <div class="inputContent">
+                            <input type="text" class="secondModalInput" id="mTel" minlength="14" required>
+                            <label for="mTel" class="label">Telefone</label>
+                        </div>
+                        <button type="button" id="dbPersist">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal-error-container" id="modal-error-container">
+            <div class="modal-error" id="modal-error">
+                <i class="fa-regular fa-circle-xmark close-modal-error" id="close-modal-error"></i>
+                <span id="modal-error-msg"></span>
+                <button class="btnLogin" id="ok-button">Ok</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h1>Copyright © loolcas<a href="https://github.com/loolcas" target="_blank"><i
+                    class="fa-brands fa-github"></i></a>| Todos os direitos
+            reservados</h1>
+    </footer>
+</body>
+
+<script src="assets/js/home-menu-today.js"></script>
+<script type="module" src="assets/js/menu-modal-validations.js" defer></script>
+<script type="module" src="assets/js/menu-cadastro-reserva.js" defer></script>
+<script type="module" src="assets/js/menu-cadastro-hospede.js" defer></script>
+
+</html>

@@ -1,0 +1,53 @@
+@import url(root.css);
+
+.modal-error-container {
+    min-width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    display: flex;
+}
+
+.modal-error {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 20px 10px 20px;
+    background-color: var(--bg-lighter);
+    gap: 15px 0;
+    border-radius: 0 25px;
+    border: 1px solid var(--bg-light);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.close-modal-error {
+    position: absolute;
+    top: 9.99px;
+    right: 9.99px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.modal-error span {
+    font-size: 1rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: black;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.close-modal-error:hover {
+    color: var(--blue);
+}

@@ -1,0 +1,94 @@
+@import url(root.css);
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: var(--bg-lighter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0;
+    padding: 70px;
+    border: 1px solid var(--blue);
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    font-size: 1.25em;
+}
+
+.sectionLogin img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    margin-bottom: 20px;
+}
+
+.inputContent {
+    position: relative;
+}
+
+.inputContent input {
+    padding: 7px;
+    text-decoration: none;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    background: var(--bg-lighter);
+}
+
+.inputContent input:focus {
+    outline: 0;
+    border-bottom: 2px solid var(--blue);
+}
+
+.inputContent .label {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transition: ease .3s;
+}
+
+.inputContent input:valid {
+    border-bottom: 2px solid var(--blue);
+}
+
+.inputContent input:invalid {
+    border-bottom: 2px solid lightgrey;
+}
+
+.inputContent input:focus+.label,
+.inputContent input:valid+.label {
+    top: -15px;
+    color: var(--blue);
+    font-size: 0.75em;
+}
+
+
+/* <a> -> find pages */
+a,
+.btnLogin {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-lighter);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 0 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    outline: 0;
+    transition: ease .1s;
+    text-decoration: none;
+}
+
+a:hover,
+.btnLogin:hover {
+    transform: scale(1.15);
+    color: var(--bg-light);
+    background-color: var(--blue);
+}

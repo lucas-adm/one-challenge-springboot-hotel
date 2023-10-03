@@ -1,0 +1,148 @@
+@import url(root.css);
+@import url(index.css);
+/*herdando o form*/
+
+.modalContainer,
+.nextModalContainer {
+    min-width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal,
+.nextModal {
+    position: relative;
+}
+
+.modal i,
+.nextModal i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.75em;
+    color: black;
+    cursor: pointer;
+}
+
+.nextModal i {
+    display: none;
+}
+
+.modal i:hover,
+.nextModal i:hover {
+    color: var(--blue);
+}
+
+.form {
+    background-color: var(--bg-lighter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px 0;
+    border-radius: 20px;
+    font-size: 1.25em;
+}
+
+.form .inputContent,
+.form .inputContent input {
+    width: 100%;
+}
+
+.inputContent input::placeholder {
+    color: var(--blue);
+}
+
+.inputContent .labelDate {
+    position: absolute;
+    left: 5px;
+    top: -15px;
+    font-size: 0.75em;
+}
+
+.inputContent input:valid+.labelDate,
+.inputContent input:focus+.labelDate {
+    color: var(--blue);
+}
+
+.inputContent .readonly {
+    border-bottom: 1px solid var(--blue);
+}
+
+.inputContent .labelReadonly {
+    position: absolute;
+    left: 5px;
+    top: -15px;
+    font-size: 0.75em;
+    color: var(--blue);
+}
+
+.inputContent .readonly:focus {
+    border-bottom: 1px solid var(--blue);
+}
+
+.inputContent select,
+.inputContent select option {
+    font-size: 0.85em;
+    outline: 0;
+}
+
+.modal button,
+.nextModal button {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-lighter);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 0 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    outline: 0;
+    transition: ease .1s;
+    text-decoration: none;
+}
+
+.modal button:hover,
+.nextModal button:hover {
+    transform: scale(1.15);
+    color: var(--bg-light);
+    background-color: var(--blue);
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal,
+.active .nextModal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 700px) {
+    .modal {
+        width: 90% !important;
+    }
+
+    .modal label {
+        font-size: 12px !important;
+    }
+}

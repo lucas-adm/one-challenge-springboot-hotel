@@ -1,0 +1,281 @@
+@import url(root.css);
+@import url(home-menu-modal.css);
+
+body {
+    background: transparent;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.img {
+    position: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+}
+
+.exit {
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    padding: 0 5px;
+    border: 1px solid var(--bg-light);
+    border-radius: 50%;
+    background: var(--bg-light);
+    font-size: 3rem;
+    color: var(--blue);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.exit:hover {
+    background-color: var(--blue);
+    color: var(--bg-light);
+    transform: scale(1.1);
+}
+
+body {
+    padding-top: 55.5vh;
+    background-color: var(--bg-lighter);
+    overflow: hidden;
+}
+
+main {
+    min-height: 80vh;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    position: fixed;
+    width: 77%;
+    padding: 0 25px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    background-color: var(--bg-light);
+    border: 1px solid var(--blue);
+    border-radius: 50px 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.imgContainer {
+    width: 100%;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em 0;
+}
+
+.menu h1,
+.menu h2,
+.menu h3 {
+    text-align: center;
+    color: var(--blue);
+    font-size: 1.75rem;
+}
+
+.dayTxt::before {
+    content: "Hoje é dia: ";
+}
+
+.menu p,
+.menu ul li {
+    font-size: 1.2rem;
+}
+
+.menuButtons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 2rem;
+    padding: 0 0 20px 0;
+}
+
+.menuButtons button,
+.menuButtons a {
+    cursor: pointer;
+    width: 150px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    font-size: 90%;
+    color: var(--blue);
+    background-color: var(--bg-lighter);
+    outline: 0;
+    border-radius: 0 10px;
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: .2s;
+}
+
+.menuButtons button:hover,
+.menuButtons a:hover {
+    background-color: var(--blue);
+    color: var(--bg-lighter);
+    border: 1px solid grey;
+    transform: scale(1.05);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    width: fit-content;
+    background: transparent;
+    color: var(--bg-light);
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+footer a:hover {
+    transform: none;
+}
+
+footer h1 {
+    font-size: 1.25rem;
+    color: var(--bg-light);
+    text-shadow: 0 0 4px black;
+}
+
+@media screen and (max-width: 1050px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .imgContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 610px) {}
+
+
+@media screen and (max-width: 580px) {
+
+    .main {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .menu h1,
+    .menu h2,
+    .menu h3 {
+        text-align: center;
+        color: var(--blue);
+        font-size: 4vw;
+        /* Usando porcentagem da largura da tela */
+    }
+
+    .dayTxt::before {
+        content: "Hoje é dia: ";
+    }
+
+    .menu p,
+    .menu ul li {
+        font-size: 3.5vw;
+        /* Usando porcentagem da largura da tela */
+    }
+
+    .menu ul li {
+        margin-left: 30px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: var(--gradient);
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: var(--gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer h1 {
+        font-size: clamp(.98rem, 4.25vw, 100%);
+        color: var(--bg-light);
+        text-shadow: 0 0 4px black;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .menu h1,
+    .menu h2,
+    .menu h3 {
+        text-align: center;
+        color: var(--blue);
+        font-size: 4.5vw;
+        /* Usando porcentagem da largura da tela */
+    }
+
+    .dayTxt::before {
+        content: "Hoje é dia: ";
+    }
+
+    .menu p,
+    .menu ul li {
+        font-size: 4.5vw;
+        /* Usando porcentagem da largura da tela */
+    }
+}
+
+@media screen and (max-width: 465px) {
+
+    .menuButtons {
+        gap: 0.25rem;
+    }
+
+    .menuButtons button,
+    .menuButtons a {
+        font-size: 3vw;
+        width: 120px;
+        padding: 5px 5px;
+    }
+
+}

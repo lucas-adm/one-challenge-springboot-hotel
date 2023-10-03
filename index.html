@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Hotel Alura</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/modal-error.css">
+</head>
+
+<body>
+    <form action="home-menu.html" class="form" id="form">
+        <img src="assets/imgs/login.png" alt="foto de um usuário">
+        <div class="inputContent">
+            <input type="text" name="iName" id="iName" required>
+            <label for="iName" class="label">Nome</label>
+        </div>
+        <div class="inputContent">
+            <input type="password" name="iPassword" id="iPassword" required>
+            <label for="iPassword" class="label">Senha</label>
+        </div>
+        <button type="submit" class="btnLogin" id="login">Logar</button>
+    </form>
+
+    <div class="modal-error-container" id="modal-error-container">
+        <div class="modal-error" id="modal-error">
+            <i class="fa-regular fa-circle-xmark close-modal-error" id="close-modal-error"></i>
+            <span id="modal-error-msg"></span>
+            <button class="btnLogin" id="ok-button">Ok</button>
+        </div>
+    </div>
+
+</body>
+
+<script src="assets/js/index-login.js" defer></script>
+
+</html>

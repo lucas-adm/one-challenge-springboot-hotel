@@ -1,0 +1,225 @@
+@import url(root.css);
+
+/*herdando o header*/
+@import url(home-menu.css);
+
+/* herdando o floating da label, a estilização da tag <a>*/
+@import url(index.css);
+
+body {
+    background: var(--bg-light);
+}
+
+button {
+    cursor: pointer;
+}
+
+header .backHome {
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+body {
+    padding-top: 27vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    background: var(--bg-lighter);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+}
+
+.headerContainer {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 12px;
+}
+
+.headerContainer .pages {
+    display: flex;
+    gap: 0 15px;
+}
+
+.headerContainer .pages .pageActive {
+    background: var(--blue);
+    color: var(--bg-lighter);
+    transform: scale(1.1);
+}
+
+.pageOther:hover {
+    background: var(--blue);
+    color: var(--bg-lighter);
+    transform: scale(1.1);
+}
+
+.headerContainer .label {
+    font-size: 1.5em;
+}
+
+.headerContainer button {
+    font-weight: 900;
+    font-size: 20px;
+    word-break: break-all;
+}
+
+#find {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    color: var(--bg-lighter);
+    background-color: var(--blue);
+}
+
+.tableContainer {
+    padding: 10px;
+    max-height: calc(100vh - 40vh);
+    width: auto;
+    height: inherit;
+    overflow: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.tableContainer::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--bg-lighter);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+tr {
+    border-bottom: 1px solid rgb(238, 235, 235) !important;
+}
+
+tbody tr td {
+    vertical-align: text-top;
+    padding: 6px 5px;
+    max-width: fit-content;
+}
+
+thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+
+thead tr th.acao {
+    width: 100px !important;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-lighter);
+}
+
+tbody tr td.acao {
+    text-align: center;
+
+}
+
+tbody tr td.acao button {
+    text-align: center;
+    width: fit-content;
+}
+
+tbody tr td.acao button i {
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.35em;
+    transition: ease .1s;
+}
+
+tbody tr td.acao button i:hover {
+    color: var(--blue);
+}
+
+td button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+td button i {
+    font-size: 25px;
+}
+
+td button i:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 10px;
+    }
+
+    .headerContainer button {
+        font-size: 15px;
+    }
+
+    .headerContainer .pages {
+        gap: 0 7px;
+    }
+
+    .dinamic-find {
+        width: 100px;
+        font-size: 0.7rem;
+    }
+
+    #find {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+
+
+    thead tr th.acao {
+        width: auto !important;
+    }
+
+    td button i {
+        font-size: 20px !important;
+    }
+
+    td button i:first-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    @media (max-width: 500px) {
+
+        .find {
+            width: 200px;
+        }
+
+        .find input {
+            width: 125px;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Guest | Hotel Alura</title>
+    <link rel="stylesheet" href="assets/css/find.css">
+    <link rel="stylesheet" href="assets/css/modal-error.css">
+    <link rel="stylesheet" href="assets/css/modal-delete.css">
+</head>
+
+<body>
+    <header>
+        <div class="img">
+            <a href="home-menu.html" class="backHome" title="Home Page"><img src="assets/imgs/Logo.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="headerContainer">
+                <div class="pages">
+                    <a class="pageActive">Hóspedes</a>
+                    <a href="find-reserve.html" class="pageOther">Reservas</a>
+                </div>
+                <div class="inputContent">
+                    <input type="text" name="finder" class="dinamic-find" id="dinamicFind" placeholder="Busca dinâmica">
+                </div>
+                <div class="find">
+                    <div class="inputContent">
+                        <input type="text" name="finder" id="findBy" required>
+                        <label for="findBy" class="label">Sobrenome</label>
+                        <button id="find">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Data de Nascimento</th>
+                        <th>Nacionalidade</th>
+                        <th>Telefone</th>
+                        <th>Reserva Id</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="modalContainer">
+            <div class="modal">
+                <i class="fa-regular fa-circle-xmark" id="closeModal"></i>
+                <form action="" class="form">
+                    <div class="inputContent">
+                        <input type="number" id="mIdGuest" class="readonly modalInputs" readonly>
+                        <label for="mIdGuest" class="labelReadonly">Id</label>
+                    </div>
+
+                    <div class="inputContent">
+                        <input type="text" class="modalInputs" id="mNome" required>
+                        <label for="mNome" class="label">Nome</label>
+                    </div>
+
+                    <div class="inputContent">
+                        <input type="text" class="modalInputs" id="mSobrenome" required>
+                        <label for="mSobrenome" class="label">Sobrenome</label>
+                    </div>
+
+                    <div class="inputContent">
+                        <input type="date" class="modalInputs" id="mNascimento" required>
+                        <label for="mNascimento" class="labelDate">Data de Nascimento</label>
+                    </div>
+
+                    <div class="inputContent">
+                        <label for="mNacionalidade">Nacionalidade</label>
+                        <select name="mNacionalidade" id="mNacionalidade">
+                            <option value="brasileiro">brasileiro</option>
+                            <option value="portugues">português</option>
+                            <option value="estadunidense">estadunidense</option>
+                        </select>
+                    </div>
+
+                    <div class="inputContent">
+                        <input type="text" class="modalInputs" id="mTel" maxlength="14" required>
+                        <label for="mTel" class="label">Telefone</label>
+                    </div>
+
+                    <div class="inputContent">
+                        <input type="number" id="mIdReserve" class="readonly" readonly>
+                        <label for="mIdReserve" class="labelReadonly">Id da reserva</label>
+                    </div>
+                    <button id="dbPersist" type="button">Salvar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-delete-container" id="modal-delete-container">
+            <div class="modal-delete" id="modal-delete">
+                <i class="fa-regular fa-circle-xmark close-modal-delete" id="close-modal-delete"></i>
+                <span id="modal-delete-msg"></span>
+                <button class="btnDelete" id="delete-button">Deletar</button>
+            </div>
+        </div>
+
+        <div class="modal-error-container" id="modal-error-container">
+            <div class="modal-error" id="modal-error">
+                <i class="fa-regular fa-circle-xmark close-modal-error" id="close-modal-error"></i>
+                <span id="modal-error-msg"></span>
+                <button class="btnDelete" id="ok-button">Ok</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script type="module" src="assets/js/find-guest.js"></script>
+<script type="module" src="assets/js/find-guest-delete.js"></script>
+<script type="module" src="assets/js/find-guest-update.js"></script>
+
+</html>
