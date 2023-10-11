@@ -153,7 +153,7 @@ document.addEventListener('scriptsLoaded', () => {
         }
 
         try {
-            const resposta = await fetch("https://apirest-hotel.up.railway.app/reservas", {
+            const resposta = await fetch("https://oraclene-hotel.onrender.com/reservas", {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json'

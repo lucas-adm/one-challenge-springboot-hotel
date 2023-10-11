@@ -22,7 +22,7 @@ const buscaDinamica = document.querySelector('#dinamicFind');
 export async function buscarEInserirNaTabela() {
     try {
 
-        const response = await fetch('https://apirest-hotel.up.railway.app/hospedes/lista');
+        const response = await fetch('https://oraclene-hotel.onrender.com/hospedes/lista');
         const data = await response.json();
 
         //limpa todo conteúdo antigo da tabela
@@ -83,7 +83,7 @@ find.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('https://apirest-hotel.up.railway.app/hospedes/sobrenome', {
+        const response = await fetch('https://oraclene-hotel.onrender.com/hospedes/sobrenome', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

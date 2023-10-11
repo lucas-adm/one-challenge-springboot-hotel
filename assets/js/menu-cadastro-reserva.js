@@ -19,7 +19,7 @@ const botaoProximo = document.querySelector('#btnToNext');
 
 export let idReserva;
 
-const urlId = "https://apirest-hotel.up.railway.app/reservas";
+const urlId = "https://oraclene-hotel.onrender.com/reservas";
 //Recuperando a última reserva no banco de dados
 fetch(urlId)
     .then(response => response.json())
@@ -46,7 +46,7 @@ botaoProximo.addEventListener('click', async () => {
     }
 
     try {
-        const resposta = await fetch("https://apirest-hotel.up.railway.app/reservas", {
+        const resposta = await fetch("https://oraclene-hotel.onrender.com/reservas", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',

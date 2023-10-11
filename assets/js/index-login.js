@@ -24,7 +24,7 @@ form.addEventListener('submit', async (event) => {
 
     try {
 
-        const response = await fetch('https://apirest-hotel.up.railway.app/login', {
+        const response = await fetch('https://oraclene-hotel.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
