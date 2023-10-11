@@ -1,8 +1,5 @@
 CREATE TABLE usuarios(
-    id BIGINT NOT NULL AUTO_INCREMENT,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(25) NOT NULL,
-    senha VARCHAR(25) NOT NULL,
-
-    PRIMARY KEY(id)
+    senha VARCHAR(25) NOT NULL
 );
-

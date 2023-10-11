@@ -1,6 +1,6 @@
-INSERT INTO usuarios VALUES(null, 'root', 'root');
-INSERT INTO usuarios VALUES(null, 'admin', 'admin');
-INSERT INTO usuarios VALUES(null, 'alura', 'alura');
-INSERT INTO usuarios VALUES(null, 'alura', 'oracle');
-INSERT INTO usuarios VALUES(null, 'oracle', 'alura');
-INSERT INTO usuarios VALUES(null, 'oracle', 'oracle');
+INSERT INTO usuarios (nome, senha) VALUES ('root', 'root');
+INSERT INTO usuarios (nome, senha) VALUES ('admin', 'admin');
+INSERT INTO usuarios (nome, senha) VALUES ('alura', 'alura');
+INSERT INTO usuarios (nome, senha) VALUES ('alura', 'oracle');
+INSERT INTO usuarios (nome, senha) VALUES ('oracle', 'alura');
+INSERT INTO usuarios (nome, senha) VALUES ('oracle', 'oracle');
