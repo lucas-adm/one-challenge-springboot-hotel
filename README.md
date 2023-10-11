@@ -1,13 +1,12 @@
 <h1 align="center"> Oracle Next Education Challenge - Hotel </h1>
 
-
 <br>
 
 <div align="center">
  
-<img width="100px" height="100px" src="https://railway.app/brand/logo-light.png"> ![js](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/8cbfedc7-5418-4f9f-b0e3-391f271e1b04) ![java](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/d05d48bc-3cbc-426a-9c9b-05fce8917e33) ![spring boot](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/0202867d-a6be-4cf5-bb81-a17e39b1fe73) ![json](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/d8344d65-ac64-49d6-8997-5882315d3a71) ![image](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/118f966c-4a63-4369-b85f-fe6608634ebd)
+![render cloud](https://i.imgur.com/ONuAAaH.png) ![js](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/8cbfedc7-5418-4f9f-b0e3-391f271e1b04) ![java](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/d05d48bc-3cbc-426a-9c9b-05fce8917e33) ![spring boot](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/0202867d-a6be-4cf5-bb81-a17e39b1fe73) ![json](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/d8344d65-ac64-49d6-8997-5882315d3a71) ![postgresql](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/24990d86-06f2-41a2-bd33-431358c63e58)
 
-###### *Railway Cloud, JavaScript, Java, Spring Boot, Http Request, MySQL Server*
+###### *Render Cloud, JavaScript, Java, Spring Boot, Http Request, PostgreSQL Server*
 
 </div>
 
@@ -37,7 +36,7 @@
 
 > Para o Back-End Deploy:
 ```java
-https://railway.app
+https://render.com
 ```
 > Para o Front-End Deploy:
 ```javascript
