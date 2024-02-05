@@ -153,7 +153,7 @@ document.addEventListener('scriptsLoaded', () => {
         }
 
         try {
-            const resposta = await fetch("http://localhost:8080/reservas", {
+            const resposta = await fetch("https://one-challenge-springboot-hotel.onrender.com/reservas", {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json'

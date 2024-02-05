@@ -48,7 +48,7 @@ document.addEventListener('scriptsLoaded', () => {
 
                 confirmDelete.classList.remove('active');
 
-                fetch(`http://localhost:8080/hospedes/${hospedeId}`, {
+                fetch(`https://one-challenge-springboot-hotel.onrender.com/hospedes/${hospedeId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

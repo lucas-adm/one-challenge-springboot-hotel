@@ -21,7 +21,7 @@ const buscaDinamica = document.querySelector('#dinamicFind');
 export async function buscarEInserirNaTabela() {
     try {
 
-        const response = await fetch('http://localhost:8080/reservas/lista');
+        const response = await fetch('https://one-challenge-springboot-hotel.onrender.com/reservas/lista');
         const data = await response.json();
 
         //limpa todo conteúdo antigo da tabela
@@ -78,7 +78,7 @@ find.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('http://localhost:8080/reservas/id', {
+        const response = await fetch('https://one-challenge-springboot-hotel.onrender.com/reservas/id', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

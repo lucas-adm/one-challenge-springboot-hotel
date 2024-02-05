@@ -193,7 +193,7 @@ document.addEventListener('scriptsLoaded', () => {
 
         try {
 
-            const response = await fetch("http://localhost:8080/hospedes", {
+            const response = await fetch("https://one-challenge-springboot-hotel.onrender.com/hospedes", {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -53,7 +53,7 @@ document.addEventListener('scriptsLoaded', () => {
                 confirmDelete.classList.remove('active');
 
                 /// Fazer uma solicitação de exclusão para o servidor
-                fetch(`http://localhost:8080/reservas/${reservaId}`, {
+                fetch(`https://one-challenge-springboot-hotel.onrender.com/reservas/${reservaId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

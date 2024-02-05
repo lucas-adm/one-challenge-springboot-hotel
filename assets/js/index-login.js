@@ -24,7 +24,7 @@ form.addEventListener('submit', async (event) => {
 
     try {
 
-        const response = await fetch('http://localhost:8080/login', {
+        const response = await fetch('https://one-challenge-springboot-hotel.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,5 +54,3 @@ form.addEventListener('submit', async (event) => {
     }
 
 });
-
-
