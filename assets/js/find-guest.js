@@ -22,7 +22,7 @@ const buscaDinamica = document.querySelector('#dinamicFind');
 export async function buscarEInserirNaTabela() {
     try {
 
-        const response = await fetch('https://oraclene-hotel.onrender.com/hospedes/lista');
+        const response = await fetch('http://localhost:8080/hospedes/lista');
         const data = await response.json();
 
         //limpa todo conteúdo antigo da tabela
@@ -31,13 +31,13 @@ export async function buscarEInserirNaTabela() {
         data.forEach(item => {
             const row = document.createElement('tr');
             row.innerHTML = `
-            <td>id ${item.id}</td>
-            <td>${item.nome}</td>
-            <td>${item.sobrenome}</td>
-            <td>${item.dataNascimento}</td>
-            <td>${item.nacionalidade}</td>
-            <td>${item.telefone}</td>
-            <td>${item.reservaId}</td>
+            <td data-td="Id">id ${item.id}</td>
+            <td data-td="Nome">${item.nome}</td>
+            <td data-td="Sobrenome">${item.sobrenome}</td>
+            <td data-td="Data de Nascimento">${item.dataNascimento}</td>
+            <td data-td="Nacionalidade">${item.nacionalidade}</td>
+            <td data-td="Telefone">${item.telefone}</td>
+            <td data-td="Reserva Id">${item.reservaId}</td>
             <td class="acao">
                 <button><i class="fa-solid fa-pen-to-square" id="put" 
                 data-hospede-id="${item.id}" 
@@ -83,7 +83,7 @@ find.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('https://oraclene-hotel.onrender.com/hospedes/sobrenome', {
+        const response = await fetch('http://localhost:8080/hospedes/sobrenome', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -101,13 +101,13 @@ find.addEventListener('click', async () => {
                 data.forEach(item => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                <td>id ${item.id}</td>
-                <td>${item.nome}</td>
-                <td>${item.sobrenome}</td>
-                <td>${item.dataNascimento}</td>
-                <td>${item.nacionalidade}</td>
-                <td>${item.telefone}</td>
-                <td>${item.reservaId}</td>
+                <td data-td="Id">id ${item.id}</td>
+                <td data-td="Nome">${item.nome}</td>
+                <td data-td="Sobrenome">${item.sobrenome}</td>
+                <td data-td="Data de Nascimento">${item.dataNascimento}</td>
+                <td data-td="Nacionalidade">${item.nacionalidade}</td>
+                <td data-td="Telefone">${item.telefone}</td>
+                <td data-td="Reserva Id">${item.reservaId}</td>
                 <td class="acao">
                     <button><i class="fa-solid fa-pen-to-square" id="put" 
                     data-hospede-id="${item.id}" 

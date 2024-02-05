@@ -48,7 +48,7 @@ document.addEventListener('scriptsLoaded', () => {
 
                 confirmDelete.classList.remove('active');
 
-                fetch(`https://oraclene-hotel.onrender.com/hospedes/${hospedeId}`, {
+                fetch(`http://localhost:8080/hospedes/${hospedeId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

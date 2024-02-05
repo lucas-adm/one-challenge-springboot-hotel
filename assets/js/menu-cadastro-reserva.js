@@ -17,9 +17,9 @@ import { validacaoBemSucedida, dataInicioValue, dataFimValue, valorReservaValue,
 const mIdReserva = document.querySelector('#mIdReserve');
 const botaoProximo = document.querySelector('#btnToNext');
 
-export let idReserva;
+export let idReserva; 
 
-const urlId = "https://oraclene-hotel.onrender.com/reservas";
+const urlId = "http://localhost:8080/reservas";
 //Recuperando a última reserva no banco de dados
 fetch(urlId)
     .then(response => response.json())
@@ -46,7 +46,7 @@ botaoProximo.addEventListener('click', async () => {
     }
 
     try {
-        const resposta = await fetch("https://oraclene-hotel.onrender.com/reservas", {
+        const resposta = await fetch("http://localhost:8080/reservas", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',

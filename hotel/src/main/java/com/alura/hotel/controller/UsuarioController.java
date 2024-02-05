@@ -32,9 +32,4 @@ public class UsuarioController {
 
     }
 
-//    @GetMapping
-//    public ResponseEntity<List<Usuario>> login(Usuario usuario){
-//        List<Usuario> lista= repository.findAll();
-//        return ResponseEntity.ok().body(lista);
-//    }
 }

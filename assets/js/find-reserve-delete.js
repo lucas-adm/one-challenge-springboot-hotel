@@ -53,7 +53,7 @@ document.addEventListener('scriptsLoaded', () => {
                 confirmDelete.classList.remove('active');
 
                 /// Fazer uma solicitação de exclusão para o servidor
-                fetch(`https://oraclene-hotel.onrender.com/reservas/${reservaId}`, {
+                fetch(`http://localhost:8080/reservas/${reservaId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'

@@ -173,6 +173,26 @@ td button i:first-child {
     margin-right: 10px;
 }
 
+@media (max-width: 760px) {
+
+    .pages {
+        font-size: 1rem;
+    }
+
+    .headerContainer {
+        gap: 0 1rem;
+    }
+
+    .inputContent #dinamicFind,
+    .inputContent #findBy {
+        width: 125px;
+    }
+
+    thead tr {
+        font-size: 11px;
+    }
+}
+
 @media (max-width: 700px) {
     body {
         font-size: 10px;
@@ -210,16 +230,52 @@ td button i:first-child {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 550px) {
 
-    @media (max-width: 500px) {
-
-        .find {
-            width: 200px;
-        }
-
-        .find input {
-            width: 125px;
-        }
+    .headerContainer,
+    .headerContainer .pages {
+        gap: 0 1rem;
     }
+
+    .pages a {
+        font-size: 1rem;
+    }
+
+    .headerContainer .find .inputContent {
+        display: none;
+    }
+
+    .headerContainer .inputContent:last-child {
+        display: none;
+    }
+
+    .headerContainer .dinamic-find {
+        font-size: .75rem;
+    }
+
+    thead {
+        display: none;
+    }
+
+    td {
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1rem;
+    }
+
+    td::before {
+        content: attr(data-td) ": ";
+        font-weight: bold;
+    }
+
+    td:nth-last-child(-n+2) {
+        display: inline-block;
+        margin-left: 85px;
+    }
+
+    td:nth-last-child(-n+2)::before {
+        content: '';
+    }
+
 }

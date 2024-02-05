@@ -153,7 +153,7 @@ document.addEventListener('scriptsLoaded', () => {
         }
 
         try {
-            const resposta = await fetch("https://oraclene-hotel.onrender.com/reservas", {
+            const resposta = await fetch("http://localhost:8080/reservas", {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json'

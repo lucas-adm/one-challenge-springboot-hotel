@@ -21,7 +21,7 @@ const buscaDinamica = document.querySelector('#dinamicFind');
 export async function buscarEInserirNaTabela() {
     try {
 
-        const response = await fetch('https://oraclene-hotel.onrender.com/reservas/lista');
+        const response = await fetch('http://localhost:8080/reservas/lista');
         const data = await response.json();
 
         //limpa todo conteúdo antigo da tabela
@@ -30,12 +30,12 @@ export async function buscarEInserirNaTabela() {
         data.forEach(item => {
             const row = document.createElement('tr');
             row.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.dataCheckIn}</td>
-            <td>${item.dataCheckOut}</td>
-            <td>R$${item.valorReserva},00</td>
-            <td>${item.pagamento}</td>
-            <td class="acao">
+            <td data-td="Reserva Id">${item.id}</td>
+            <td data-td="Data de check-in">${item.dataCheckIn}</td>
+            <td data-td="Data de check-out">${item.dataCheckOut}</td>
+            <td data-td="Valor da reserva">R$${item.valorReserva},00</td>
+            <td data-td="Forma de pagamento">${item.pagamento}</td>
+            <td data-td="Editar" class="acao">
                 <button><i class="fa-solid fa-pen-to-square" id="put" 
                 data-reserva-id="${item.id}" 
                 data-reserva-checkin="${item.dataCheckIn}" 
@@ -43,7 +43,7 @@ export async function buscarEInserirNaTabela() {
                 data-reserva-valor="${item.valorReserva}" 
                 data-reserva-pagamento="${item.pagamento}"></i></button>
             </td>
-            <td class="acao">
+            <td data-td="Excluir" class="acao">
                 <button><i class="fa-solid fa-trash" id="delete" 
                 data-reserva-id="${item.id}" 
                 data-reserva-valor="${item.valorReserva}"></i></button>
@@ -78,7 +78,7 @@ find.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch('https://oraclene-hotel.onrender.com/reservas/id', {
+        const response = await fetch('http://localhost:8080/reservas/id', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -95,12 +95,12 @@ find.addEventListener('click', async () => {
             if (data) {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                <td>${data.id}</td>
-                <td>${data.dataCheckIn}</td>
-                <td>${data.dataCheckOut}</td>
-                <td>R$${data.valorReserva},00</td>
-                <td>${data.pagamento}</td>
-                <td class="acao">
+                <td data-td="Reserva Id">${data.id}</td>
+                <td data-td="Data de check-in">${data.dataCheckIn}</td>
+                <td data-td="Data de check-out">${data.dataCheckOut}</td>
+                <td data-td="Valor da reserva">R$${data.valorReserva},00</td>
+                <td data-td="Forma de pagamento">${data.pagamento}</td>
+                <td data-td="Editar" class="acao">
                     <button><i class="fa-solid fa-pen-to-square" id="put" 
                     data-reserva-id="${data.id}" 
                     data-reserva-checkin="${data.dataCheckIn}" 
@@ -108,7 +108,7 @@ find.addEventListener('click', async () => {
                     data-reserva-valor="${data.valorReserva}" 
                     data-reserva-pagamento="${data.pagamento}"></i></button>
                 </td>
-                <td class="acao">
+                <td data-td="Excluir" class="acao">
                     <button><i class="fa-solid fa-trash" id="delete" 
                     data-reserva-id="${data.id}" 
                     data-reserva-valor="${data.valorReserva}"></i></button>

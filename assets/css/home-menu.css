@@ -224,7 +224,7 @@ footer h1 {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 496px) {
 
     footer {
         position: fixed;
@@ -237,7 +237,7 @@ footer h1 {
     }
 
     footer h1 {
-        font-size: clamp(.98rem, 4.25vw, 100%);
+        font-size: 14px;
         color: var(--bg-light);
         text-shadow: 0 0 4px black;
     }

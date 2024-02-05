@@ -22,7 +22,7 @@ const persist = document.querySelector('#dbPersist');
 
 let idReservaNextModal;
 
-const urlId = "https://oraclene-hotel.onrender.com/reservas";
+const urlId = "http://localhost:8080/reservas";
 //Recuperando a última reserva no banco de dados
 fetch(urlId)
     .then(response => response.json())
@@ -48,7 +48,7 @@ persist.addEventListener('click', async () => {
     }
 
     try {
-        const resposta = await fetch("https://oraclene-hotel.onrender.com/hospedes", {
+        const resposta = await fetch("http://localhost:8080/hospedes", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
