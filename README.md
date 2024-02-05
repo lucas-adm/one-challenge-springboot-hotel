@@ -1,44 +1,33 @@
-<h1 align="center"> Oracle Next Education Challenge - Hotel </h1>
+<h3 align="center"> Oracle Next Education Challenge - Hotel </h3>
 
 <br>
 
 <div align="center">
  
-![render cloud](https://i.imgur.com/ONuAAaH.png) ![js](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/8cbfedc7-5418-4f9f-b0e3-391f271e1b04) ![java](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/d05d48bc-3cbc-426a-9c9b-05fce8917e33) ![spring boot](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/0202867d-a6be-4cf5-bb81-a17e39b1fe73) ![json](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/d8344d65-ac64-49d6-8997-5882315d3a71) ![postgresql](https://github.com/loolcas/OracleNE-Hotel/assets/118030896/24990d86-06f2-41a2-bd33-431358c63e58)
+<img width="75px" height="75px" src="https://github.com/lucas-adm/one-challenge-springboot-hotel/assets/118030896/6c447d00-da27-44c0-880d-eb032efe7dee">
+<img width="75px" height="75px" src="https://github.com/lucas-adm/one-challenge-springboot-hotel/assets/118030896/0256ad1e-eced-4521-a3a1-7102c3b4f8d7">
+<img width="75px" height="75px" src="https://github.com/lucas-adm/one-challenge-springboot-hotel/assets/118030896/ba256dce-7970-404f-8ebc-93e482480e77">
+<img width="75px" height="75px" src="https://github.com/lucas-adm/one-challenge-springboot-hotel/assets/118030896/d9ea1b67-961e-4ce5-a236-dc29c18b225c">
+<img width="75px" height="75px" src="https://i.imgur.com/ONuAAaH.png">
 
-###### *Render Cloud, JavaScript, Java, Spring Boot, Http Request, PostgreSQL Server*
+###### PostgreSQL , Java, SpringBoot, JavaScript, Render
 
 </div>
 
-<br>
+#
 
-##### Nomes e senhas para login:
-```javascript
-[
-  {nome:"admin", senha:"admin"},
-  {nome:"oracle", senha:"oracle"},
-  {nome:"alura", senha:"alura"},
-  {nome:"root", senha:"root"}
-]
+#### Para acessar o site <a href="">*clique aqui*</a>
+
+<details>
+ <summary>Logins disponíveis</summary>
+ 
+```js
+"nomes": root, alura, oracle, admin
+"senhas": root, alura, oracle, admin
 ```
 
-### ▶ <a href="https://loolcas.github.io/OracleNE-Hotel/">*App disponível aqui!*</a>
+</details>
 
-<br>
-
-<div align="center">
+###### Banco de Dados e Server Deploy por <a href="render.com">*Render*</a>
 
 ![hotel](https://i.imgur.com/TV6x4Wv.png)
-  
-</div>
-
-<br>
-
-> Para o Back-End Deploy:
-```java
-https://render.com
-```
-> Para o Front-End Deploy:
-```javascript
-https://pages.github.com
-```
