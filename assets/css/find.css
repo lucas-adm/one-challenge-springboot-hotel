@@ -7,7 +7,14 @@
 @import url(index.css);
 
 body {
+    min-width: 100vw;
+    min-height: 100vh;
     background: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    gap: 1.5rem;
+    overflow: hidden;
 }
 
 button {
@@ -18,11 +25,6 @@ header .backHome {
     transform: none;
     background: transparent;
     box-shadow: none;
-}
-
-body {
-    padding-top: 27vh;
-    overflow: hidden;
 }
 
 .container {
