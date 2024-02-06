@@ -10,7 +10,7 @@
 <img width="75px" height="75px" src="https://github.com/lucas-adm/one-challenge-springboot-hotel/assets/118030896/d9ea1b67-961e-4ce5-a236-dc29c18b225c">
 <img width="75px" height="75px" src="https://i.imgur.com/ONuAAaH.png">
 
-###### PostgreSQL , Java, SpringBoot, JavaScript, Render
+###### PostgreSQL , Java, Spring Boot, JavaScript, Render
 
 </div>
 
